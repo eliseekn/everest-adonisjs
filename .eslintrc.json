@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "plugin:adonis/typescriptApp"
+  ],
+  "rules": {
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", "tabs"]
+  }
+}
