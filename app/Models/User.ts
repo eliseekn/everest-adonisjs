@@ -16,6 +16,9 @@ export default class User extends BaseModel {
     @column()
     public rememberMeToken?: string
 
+    @column()
+    public role: string
+
     @hasMany(() => Post)
     public posts: HasMany<typeof Post>
 

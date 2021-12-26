@@ -19,14 +19,14 @@ export default class Post extends BaseModel {
     @column()
     public content: string
 
-    @column.dateTime({ autoCreate: true })
-    public createdAt: DateTime
-
     @hasMany(() => Comment)
     public comments: HasMany<typeof Comment>
 
     @belongsTo(() => User)
     public user: BelongsTo<typeof User>
+
+    @column.dateTime({ autoCreate: true })
+    public createdAt: DateTime
 
     @column.dateTime({ autoCreate: true, autoUpdate: true })
     public updatedAt: DateTime
